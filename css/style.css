@@ -1,0 +1,26 @@
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+h1{
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10%;
+    color: blue;
+    
+}
+#cont1{
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px;
+    width: 100%;
+}
+nav{
+    opacity: 0.5;
+}
+body{
+    padding: 0px;
+}
