@@ -71,3 +71,17 @@ button #bttn{
 fieldset{
     border-radius: 30%;
 }
+fieldset#yourOrder{
+    background-color: rgb(25, 25, 53);
+    color: burlywood;
+    width: 100%;
+    
+    opacity: 0.6
+}
+h3{
+   text-align: center; 
+}
+button#bttnn{
+    position: relative;
+    right: 50px;
+}
