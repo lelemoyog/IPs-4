@@ -1,43 +1,84 @@
-function Order(crust ,flavour ,topping ,size){
+function Order(crust, flavour, topping, size) {
     this.crust = crust;
-    this.flavour= flavour;
-    this.topping= topping;
-    this.size= size;
+    this.flavour = flavour;
+    this.topping = topping;
+    this.size = size;
 }
-Order.prototype.newOrder= function(){
-    return "<li>"+this.crust + " </br>"+"<li>"+this.flavour+ "</br> "+"<li>"+this.topping + " </br>"+"<li>"+this.size +"</li>"
+Order.prototype.newOrder = function () {
+    return "<li>" + this.crust + " </br>" + "<li>" + this.flavour + "</br> " + "<li>" + this.topping + " </br>" + "<li>" + this.size + "</li>" + "</br>"
 }
-function PriceToppings(mozzarella,fetaCheese ,pineapple){
-    this.mozzarella=250;
-    this.fetaCheese=150;
-    this.pineapple=50;
+// function PriceToppings(mozzarella,fetaCheese ,pineapple){
+//     this.mozzarella=mozzarella;
+//     this.fetaCheese=fetaCheese;
+//     this.pineapple=pineapple;
+// }
+// PriceToppings.prototype.priceTopping= function(){
+
+//      return this
+
+// }
+function resetInputField() {
+    $("input[name='group2']").val("");
+    $("input[name='group1']").val("");
+    $("input[name='group3']").val("");
+    $("input[name='group4']").val("");
 }
 
 
 
+$(document).ready(function () {
 
-$(document).ready(function(){
-   
-    $('form#order').hide (); 
+    $('form#order').hide();
     $("div#appnd").hide();
+    $("fieldset#large").hide();
+    $("fieldset#regular").hide();
+    $("fieldset#medium").hide();
 
-    $('button#btn').click(function(event){
-         event.preventDefault();
+    $("input#lag").click(function () {
+        $("fieldset#large").toggle();
+    })
+    $("input#reg").click(function () {
+        $("fieldset#regular").toggle();
+    })
+    $("input#med").click(function () {
+        $("fieldset#medium").toggle();
+    })
+
+    $('button#btn,button#bttnn').click(function (event) {
+        event.preventDefault();
 
         $('form#order').toggle()
     });
-    $("button#bttn,button#bttnn").click(function(event){
+    $("button#bttn").click(function (event) {
         event.preventDefault();
-        $("div#appnd").toggle()
+        $("div#appnd").show()
 
-         var inputcrust =$("input[name='group2']:checked").val();
-         var inputflavour =$("input[name='group1']:checked").val();
-         var inputtopping =$("input[name='group3']:checked").val();
-         var inputsize =$("input[name='group4']:checked").val();
-          
-         var neworder = new Order(inputcrust,inputflavour,inputtopping,inputsize )
+        var inputcrust = $("input[name='group2']:checked").val();
+        var inputflavour = $("input[name='group1']:checked").val();
+        var inputtopping = $("input[name='group3']:checked").val();
+        var inputsize = $("input[name='group4']:checked").val();
+        var inputNoOfOrdes = $("input#nOd").val();
+        var neworder = new Order(inputcrust, inputflavour, inputtopping, inputsize)
+
         $("#appededList").append(neworder.newOrder());
-        console.log(neworder)
+        
+
+        
+        console.log(inputNoOfOrdes);
+        // console.log (price.priceTopping())
+        // var price = 0
+
+        //     if (inputtopping ==" Mozzarella"){
+        //         price = price + 250
+
+        //     }else if (inputtopping  == "FetaCheese"){
+        //         return 150
+        //     }else if(inputtopping  ==" pineapple"){
+        //         return 50
+        //     }
+
+        // 
+        // console.log()
 
 
 
@@ -47,11 +88,11 @@ $(document).ready(function(){
         //  console.log(flavour);
         //   console.log(topping);
         //  console.log(size);
+         
 
-
-           })
-
+    })
     
+
    
 
 });
