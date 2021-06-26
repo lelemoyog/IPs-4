@@ -11,16 +11,63 @@ h1{
     
 }
 #cont1{
-    
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0px;
     width: 100%;
+    display: block;
 }
 nav{
     opacity: 0.5;
 }
-body{
+html{
     padding: 0px;
+    display: block;
+    margin: 0;
+    border-collapse: collapse;
+}
+.mySlides {display:none;}
+#btn{
+    float:right;
+    color: rgb(65, 50, 32);
+}
+#av{
+    background-color: blue;
+    color: burlywood;
+    width: 30%;
+    opacity: 0.5;
+}
+div#af{
+    background-color: rgb(25, 25, 53);
+    color: burlywood;
+    width: 50%;
+    text-align: center;
+    opacity: 0.6;
+    float: right;
+}
+
+#footer{
+    background-color: rgb(25, 25, 53);
+    color: burlywood;
+    width: 100%;
+    text-align: center;
+    opacity: 0.6;
+}
+form#order{
+    
+    width: 80%;
+   
+   
+}
+button #bttn{
+    position: relative;
+    right: 50px;
+    padding-top: 10px;
+    margin-top:10px ;
+
+}
+fieldset{
+    border-radius: 10%;
 }
