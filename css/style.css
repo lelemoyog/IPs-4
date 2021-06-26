@@ -57,7 +57,7 @@ div#af{
 }
 form#order{
     
-    width: 80%;
+    width: 60%;
    
    
 }
@@ -69,5 +69,5 @@ button #bttn{
 
 }
 fieldset{
-    border-radius: 10%;
+    border-radius: 30%;
 }
