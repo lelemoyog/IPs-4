@@ -74,7 +74,8 @@ fieldset{
 fieldset#yourOrder{
     background-color: rgb(25, 25, 53);
     color: burlywood;
-    width: 100%;
+    width: 80%;
+    border-radius: 20px;
     
     opacity: 0.6
 }
@@ -84,4 +85,12 @@ h3{
 button#bttnn{
     position: relative;
     right: 50px;
+    right: 10px;
+}
+fieldset#payment{
+    float: right;
+    
+    color: burlywood;
+    bottom: 130px;
+    border-radius: 20px;
 }
