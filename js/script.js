@@ -47,13 +47,13 @@ $(document).ready(function () {
         alert("your order will be delivered to " + location)
 
         if (location == "ngara") {
-            alert("your delivery fee is ksh: " + (0.2*150))
+            alert("your delivery fee is ksh: " + (0.8*150))
         } else if (location === "westlands") {
-            alert("your delivery fee is ksh: " + (0.2*250))
-        } else if (location === "southB") {
-            alert("your delivery fee is ksh: " + (0.2*300))
+            alert("your delivery fee is ksh: " + (0.8*250))
+        } else if (location === "southb") {
+            alert("your delivery fee is ksh: " + (0.8*300))
         } else if (location === "other") {
-            alert("your delivery fee is ksh: " + (0.2*700))
+            alert("your delivery fee is ksh: " + (0.8*700))
         } else {
             alert("you will be charged on delivery")
         }
