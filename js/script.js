@@ -7,16 +7,8 @@ function Order(crust, flavour, topping, size) {
 Order.prototype.newOrder = function () {
     return "<li>" + this.crust + " </br>" + "<li>" + this.flavour + "</br> " + "<li>" + this.topping + " </br>" + "<li>" + this.size + "</li>" + "</br>"
 }
-// function PriceToppings(mozzarella,fetaCheese ,pineapple){
-//     this.mozzarella=mozzarella;
-//     this.fetaCheese=fetaCheese;
-//     this.pineapple=pineapple;
-// }
-// PriceToppings.prototype.priceTopping= function(){
 
-//      return this
 
-// }
 function resetInputField() {
     $("input[name='group2']").val("");
     $("input[name='group1']").val("");
@@ -49,9 +41,18 @@ $(document).ready(function () {
 
         $('form#order').toggle()
     });
+
+    $("button#btnn").click(function(){
+        var location=prompt("what is your location?")
+        alert("your order will be delivered to "+ location)
+        console.log(location);
+    })
     $("button#bttn").click(function (event) {
         event.preventDefault();
-        $("div#appnd").show()
+        $("div#appnd").show();
+        $('form#order').hide();
+        document.body.scrollTop = 2;
+        document.documentElement.scrollTop = 2;
 
         var inputcrust = $("input[name='group2']:checked").val();
         var inputflavour = $("input[name='group1']:checked").val();
@@ -61,7 +62,7 @@ $(document).ready(function () {
         var neworder = new Order(inputcrust, inputflavour, inputtopping, inputsize)
 
         $("#appededList").append(neworder.newOrder());
-        
+
 
         
         console.log(inputNoOfOrdes);
