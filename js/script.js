@@ -42,17 +42,28 @@ $(document).ready(function () {
         $('form#order').toggle()
     });
 
-    $("button#btnn").click(function(){
-        var location=prompt("what is your location?")
-        alert("your order will be delivered to "+ location)
-        console.log(location);
+    $("button#btnn").click(function () {
+        var location = prompt("what is your location?")
+        alert("your order will be delivered to " + location)
+
+        if (location == "ngara") {
+            alert("your delivery fee is ksh: " + (0.2*150))
+        } else if (location === "westlands") {
+            alert("your delivery fee is ksh: " + (0.2*250))
+        } else if (location === "southB") {
+            alert("your delivery fee is ksh: " + (0.2*300))
+        } else if (location === "other") {
+            alert("your delivery fee is ksh: " + (0.2*700))
+        } else {
+            alert("you will be charged on delivery")
+        }
     })
     $("button#bttn").click(function (event) {
         event.preventDefault();
         $("div#appnd").show();
         $('form#order').hide();
-        document.body.scrollTop = 2;
-        document.documentElement.scrollTop = 2;
+        document.body.scrollTop = 1;
+        document.documentElement.scrollTop = 1;
 
         var inputcrust = $("input[name='group2']:checked").val();
         var inputflavour = $("input[name='group1']:checked").val();
@@ -61,11 +72,11 @@ $(document).ready(function () {
         var inputNoOfOrdes = $("input#nOd").val();
         var neworder = new Order(inputcrust, inputflavour, inputtopping, inputsize)
 
-    
+
         $("#appededList").append(neworder.newOrder());
-        
+
     })
-  
+
 
 });
 
