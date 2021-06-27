@@ -61,40 +61,11 @@ $(document).ready(function () {
         var inputNoOfOrdes = $("input#nOd").val();
         var neworder = new Order(inputcrust, inputflavour, inputtopping, inputsize)
 
-        $("#appededList").append(neworder.newOrder());
-
-
-        
-        console.log(inputNoOfOrdes);
-        // console.log (price.priceTopping())
-        // var price = 0
-
-        //     if (inputtopping ==" Mozzarella"){
-        //         price = price + 250
-
-        //     }else if (inputtopping  == "FetaCheese"){
-        //         return 150
-        //     }else if(inputtopping  ==" pineapple"){
-        //         return 50
-        //     }
-
-        // 
-        // console.log()
-
-
-
-
-
-        //  console.log(crust);
-        //  console.log(flavour);
-        //   console.log(topping);
-        //  console.log(size);
-         
-
-    })
     
-
-   
+        $("#appededList").append(neworder.newOrder());
+        
+    })
+  
 
 });
 
